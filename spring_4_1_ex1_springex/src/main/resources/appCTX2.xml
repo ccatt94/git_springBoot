@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="triangle" class="com.javalec.ex.Triangle">
+		<property name="width">
+			<value>10</value>
+		</property>
+		<property name="height">
+			<value>20</value>
+		</property>
+	</bean>
+
+	<bean id="rectangle" class="com.javalec.ex.Rectangle">
+		<property name="width">
+			<value>40</value>
+		</property>
+		<property name="height">
+			<value>20</value>
+		</property>
+	</bean>
+
+</beans>
