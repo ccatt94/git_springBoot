@@ -17,14 +17,15 @@ import edu.ict.ex.vo.TriAreaVO;
 public class StarController {
 
 	
-	@GetMapping("/form")
+	@GetMapping("/input")
 	public String formView() {
 		return "star/input"; 
 	}
 	
 	
-	@PostMapping("/result")
-	public String star(StarVO starVO) {
+	@GetMapping("/result")
+	public String result(StarVO starVO) {
+		System.out.println("=======별찍기=======");
 		return "star/star"; 
 	}
 	

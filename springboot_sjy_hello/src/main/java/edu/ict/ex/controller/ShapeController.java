@@ -3,6 +3,7 @@ package edu.ict.ex.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -22,7 +23,12 @@ public class ShapeController {
 	}
 	
 	@GetMapping("/recArea")
-	public String recArea(RecAreaVO recAreaVO) {
+	//@ModelAttribute를 사용하면 command 객체 이름 바꿈 & 
+	// 						  model.addAttribute로 넘기는 것도 생략 가능
+	public String recArea(@ModelAttribute("rectangle")RecAreaVO recAreaVO) {
+		
+		//model.addAttribute("rectangle", rectangle);
+		
 		return "shape/areaRec"; 
 	}
 	

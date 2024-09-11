@@ -8,8 +8,8 @@
 </head>
 <body>
 	<h1>별찍기</h1>
-	<form action="/star/star" method="post">
-		<input type="text" name="count"><br>
+	<form action="/star/result" method="get">
+		<input type="text" name="num">
 		<input type="submit" value="전송">
 	</form>
 	

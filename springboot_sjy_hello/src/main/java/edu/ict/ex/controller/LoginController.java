@@ -21,7 +21,23 @@ public class LoginController {
 	}
 	
 	@GetMapping("/check")
-	public String check(HttpServletRequest req, Model model, UserVO user) {
+	public String check(Model model, UserVO user) {
+		
+		if(user.getId().equals("abcd") && user.getPw().equals("1234")) {
+			return "redirect:/"; // /로 호출
+		}
+		if(user.getId().equals("1234") && user.getPw().equals("1234")) {
+			return "redirect:/star/input"; // redirect는 주소를 정해줌
+		}
+		
+		model.addAttribute("user", user);
+		
+		//뷰 페이지 설정
+		return "login/check";
+	}
+	
+//	@GetMapping("/check")
+//	public String check(HttpServletRequest req, Model model, UserVO user) {
 		
 //		String id = (String) req.getParameter("id");
 //		String pw = (String) req.getParameter("pw");
@@ -34,13 +50,13 @@ public class LoginController {
 //		user.setId(id);
 //		user.setPw(pw);
 		
-		model.addAttribute("user", user);
+//		model.addAttribute("user", user);
 		
 //		model.addAttribute("id", id);
 //		model.addAttribute("pw", pw);
 		
-		return "login/check"; 
-	}
+//		return "login/check"; 
+//	}
 	
 	
 }

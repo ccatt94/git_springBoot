@@ -8,8 +8,8 @@
 </head>
 <body>
 	<h1>사각형의 넓이</h1>
-	가로 : ${recAreaVO.width} <br>
-	세로 : ${recAreaVO.height} <br>
-	넓이 : ${recAreaVO.getArea()} <br>
+	가로 : ${rectangle.width} <br>
+	세로 : ${rectangle.height} <br>
+	넓이 : ${rectangle.getArea()} <br>
 </body>
 </html>
